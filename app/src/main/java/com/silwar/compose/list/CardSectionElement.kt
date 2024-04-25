@@ -28,12 +28,11 @@ fun CardSectionElement(
             containerColor = Color.White
         ),
         modifier = modifier
-            .padding(horizontal = 4.dp, vertical = 8.dp)
             .fillMaxWidth()
     ) {
         Text(
             text = title,
-            fontSize = 26.sp,
+            fontSize = 22.sp,
             color = Color(0xFF125183),
             fontWeight = FontWeight(600),
             modifier = Modifier
