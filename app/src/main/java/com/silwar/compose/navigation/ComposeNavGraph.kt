@@ -6,7 +6,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.silwar.compose.MainScreen
+import com.silwar.compose.main.MainScreen
 import com.silwar.compose.bottomsheet.BottomSheetScreen
 import com.silwar.compose.list.LazyColumn1Screen
 
@@ -24,7 +24,7 @@ fun ComposeNavGraph() {
         composable(ComposeRoutes.BottomSheetScreen.name) {
             BottomSheetScreen()
         }
-        composable(ComposeRoutes.LazyColumn1.name) {
+        composable(ComposeRoutes.List1.name) {
             LazyColumn1Screen()
         }
     }

@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -60,6 +61,17 @@ fun LazyColumn1Screen() {
                     }
                 }
             }
+        }
+        item(contentType = "footer"){
+            Text(
+                text = "This is ongoing experiment for understanding different aspects of Jetpack Compose development. Feel free to contribute.",
+                fontSize = 14.sp,
+                textAlign = TextAlign.Center,
+                color = Color(0xFFFFFFFF),
+                fontWeight = FontWeight(400),
+                modifier = Modifier
+                    .padding(start = 16.dp, end = 16.dp, bottom = 16.dp)
+            )
         }
     }
 }
