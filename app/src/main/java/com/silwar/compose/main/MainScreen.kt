@@ -1,4 +1,4 @@
-package com.silwar.compose
+package com.silwar.compose.main
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,8 +10,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.silwar.compose.navigation.ComposeRoutes
 
 @Composable
 fun MainScreen(
@@ -23,21 +23,21 @@ fun MainScreen(
             .verticalScroll(rememberScrollState())
             .padding(16.dp)
     ) {
-        Button(
-            onClick = { navController.navigate(ComposeRoutes.BottomSheetScreen.name) },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 8.dp)
-        ) {
-            Text(text = "BottomSheet")
-        }
-        Button(
-            onClick = { navController.navigate(ComposeRoutes.LazyColumn1.name) },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 8.dp)
-        ) {
-            Text(text = "List")
+
+        DashboardOptions.keys.forEach { key ->
+            DashboardOptions[key]?.let { route ->
+                Button(
+                    onClick = { navController.navigate(route) },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 8.dp)
+                ) {
+                    Text(
+                        text = key,
+                        fontSize = 16.sp
+                    )
+                }
+            }
         }
     }
 }
