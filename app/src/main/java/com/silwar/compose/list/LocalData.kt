@@ -1,6 +1,6 @@
 package com.silwar.compose.list
 
-val list1: HashMap<String, List<String>> = hashMapOf(
+val list1: LinkedHashMap<String, List<String>> = linkedMapOf(
     "January 2024" to listOf("McDonalds", "StarBucks", "Amazon Inc."),
     "February 2024" to listOf(
         "Myntra", "Google Pay", "Amazon Inc.",
