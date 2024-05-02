@@ -47,7 +47,7 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
-    packagingOptions {
+    packaging {
         resources.excludes.add("META-INF/*")
     }
 }
@@ -67,6 +67,7 @@ dependencies {
     implementation(libs.androidx.window.core.android)
     implementation(libs.androidx.material)
     implementation(libs.androidx.material.icons)
+    implementation(libs.coil)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
